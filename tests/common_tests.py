@@ -5,9 +5,14 @@ from mock import patch
 import app.common as common
 
 
-class StandAloneTests(TestCase):
+class DummyTests(TestCase):
 
     @patch('__builtin__.open')
-    def test_login(self, mock_open):
+    def test_state(self, mock_open):
         obj = common.Dummy()
-        self.assertTrue(obj.doStuff())
+        self.assertTrue(obj.getState())
+
+    @patch('__builtin__.open')
+    def test_off(self, mock_open):
+        obj = common.Dummy()
+        self.assertTrue(obj.isOff())
