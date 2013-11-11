@@ -13,6 +13,6 @@ class DummyTests(TestCase):
         self.assertTrue(obj.getState())
 
     @patch('__builtin__.open')
-    def test_off(self, mock_open):
+    def test_not_off(self, mock_open):
         obj = common.Dummy()
-        self.assertTrue(obj.isOff())
+        self.assertFalse(obj.isOff())
