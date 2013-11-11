@@ -10,4 +10,4 @@ class StandAloneTests(TestCase):
     @patch('__builtin__.open')
     def test_login(self, mock_open):
         obj = common.Dummy()
-        self.assertTrue(obj.doStuff())
+        self.assertTrue(not obj.doStuff())
