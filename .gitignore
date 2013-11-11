@@ -2,3 +2,5 @@
 *.pyc
 tags
 .coverage
+coverage.xml
+nosetests.xml
